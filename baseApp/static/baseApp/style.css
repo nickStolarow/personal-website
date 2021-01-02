@@ -1,0 +1,77 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #eeeeee;
+}
+
+.nav-link {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.name {
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+}
+
+.statement {
+    margin: 50px 0px;
+    text-align: center;
+    font-size: 45px;
+}
+
+.card {
+    background-color: #f7f7f7;
+    margin: 5% 10%;
+    padding: 40px 0px;
+    -moz-box-shadow: 0 0 20px #ccc;
+    -webkit-box-shadow: 0 0 20px #ccc;
+    box-shadow: 0 0 20px #ccc;
+}
+
+.center {
+    text-align: center;
+}
+
+.center-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.backplate {
+    background-color: black;
+    padding: 10px 10px;
+    border-radius: 3px;
+
+}
+
+.duties {
+    margin-top: 0px;
+    font-size: 25px;
+}
+
+/* When columns stack, add margin to the top of duties */
+@media only screen and (max-width: 991px) {
+    .duties {
+        margin-top: 40px;
+    }
+}
+
+/* Reduces statement font size on smallest iPhone */
+@media only screen and (max-width: 320px) {
+    .statement {
+        font-size: 40px;
+    }
+    .duties {
+        font-size: 19px !important;
+    }
+}
+
+/* Reduces duties font size when on a iPhone */
+@media only screen and (max-width: 414px) {
+    .duties {
+        font-size: 20px;
+    }
+}
