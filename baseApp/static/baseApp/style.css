@@ -28,6 +28,17 @@ body {
     box-shadow: 0 0 20px #ccc;
 }
 
+.small-card {
+    width: 374px;
+    height: 374px;
+    background-color: #f7f7f7;
+    margin: 3% 5%;
+    padding: 50px 50px;
+    -moz-box-shadow: 0 0 20px #ccc;
+    -webkit-box-shadow: 0 0 20px #ccc;
+    box-shadow: 0 0 20px #ccc;
+}
+
 .center {
     text-align: center;
 }
@@ -52,10 +63,16 @@ body {
     font-size: 25px;
 }
 
+.link-image {
+    margin-top: 0px;
+}
 /* When columns stack, add margin to the top of duties */
 @media only screen and (max-width: 991px) {
     .duties {
         margin-top: 40px;
+    }
+    .link-image {
+        margin-top: 20px;
     }
 }
 

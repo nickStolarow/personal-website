@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'zx6==qp2fi1xqs4m!8mnb711mdkn9e*kx%04b7pa6ijy9321-a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.nickstolarow.com']
+# ALLOWED_HOSTS = ['www.nickstolarow.com', 'localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition

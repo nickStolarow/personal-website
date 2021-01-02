@@ -1,0 +1,42 @@
+{% extends 'baseApp/base.html' %}
+{% load static %}
+
+{% block title %}
+    Nick Stolarow - Links
+{% endblock %}
+
+{% block content %}
+    <div class="statement">Follow Me.</div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xl-3 col-lg-3 align-self-center">
+                <a href="https://www.linkedin.com/in/nickstolarow/" target="_blank">
+                    <img class="img-fluid link-image" src="{% static 'baseApp/linkedin-logo.png' %}"
+                         alt="LinkedIn logo">
+                </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 align-self-center">
+                <a href="https://github.com/nickStolarow" target="_blank">
+                    <img class="img-fluid link-image" src="{% static 'baseApp/github-logo.png' %}"
+                         alt="GitHub logo">
+                </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 align-self-center">
+                <a href="mailto:nickstolarow@gmail.com" target="_blank">
+                        <img class="img-fluid link-image" src="{% static 'baseApp/gmail-logo.png' %}" alt="Gmail logo">
+                </a>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 align-self-center">
+                    <a href="{% static 'baseApp/Resume5.pdf' %}" target="_blank">
+                        <img class="img-fluid link-image" src="{% static 'baseApp/resume-logo.png' %}"
+                             alt="Resume logo">
+                    </a>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

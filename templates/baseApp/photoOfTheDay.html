@@ -1,0 +1,13 @@
+{% extends 'baseApp/base.html' %}
+{% load static %}
+
+{% block title %}
+    Nick Stolarow - Photo of the Day
+{% endblock %}
+
+{% block content %}
+    <div class="statement">{{ title }}</div>
+    <div class="align-self-center">
+        <img class="center-block" src="{{ url }}" alt="Photo of the day from NASA">
+    </div>
+{% endblock %}

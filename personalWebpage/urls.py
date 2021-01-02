@@ -19,5 +19,10 @@ from baseApp import views as base_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', base_view.home, name='home'),
+    path('', base_view.experience, name='experience'),
+    path('links/', base_view.links, name='links'),
+    path('gallery', base_view.gallery, name='gallery'),
+    path('photoOfTheDay/', base_view.photo_of_the_day, name='potd'),
+    path('about/', base_view.about, name='about'),
+    path('contact/', base_view.contact, name='contact'),
 ]
