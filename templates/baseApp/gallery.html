@@ -6,11 +6,12 @@
 {% endblock %}
 
 {% block content %}
+    <div class="statement">Moments.</div>
     <div class="container">
         <div class="row">
             {% for img in image %}
                 <div class="col-lg-4">
-                    <img class="img-fluid img-thumbnail" src="{{ img.image.url }}">
+                    <img class="img-fluid img-thumbnail gallery" src="{{ img.image.url }}">
                 </div>
             {% endfor %}
         </div>
