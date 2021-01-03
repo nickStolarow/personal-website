@@ -73,11 +73,16 @@ body {
     margin-right: auto;
 }
 
+.img-thumbnail {
+    margin-top: 10px;
+}
+
 /* When columns stack, add margin to the top of duties */
 @media only screen and (max-width: 991px) {
     .duties {
         margin-top: 40px;
     }
+
     .link-image {
         margin-top: 20px;
     }
@@ -88,6 +93,7 @@ body {
     .statement {
         font-size: 40px;
     }
+
     .duties {
         font-size: 19px !important;
     }
