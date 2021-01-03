@@ -16,13 +16,14 @@ def gallery(request):
 
 
 def photo_of_the_day(request):
-    date = datetime.datetime.now()
-    date = f'{date.year}-{date.month}-{date.day}'
-    date = '2021-01-01'
-    url = f'https://api.nasa.gov/planetary/apod?date={date}&hd=True&api_key=wgsgsqhuVb3nULkzTyVNPt0s1pLPwNGOWnTwljml'
-    response = requests.get(url)
-    potd = response.json()
-    return render(request, 'baseApp/photoOfTheDay.html', {'potd': 'active', 'url': potd['url'], 'title': potd['title']})
+    # date = datetime.datetime.now()
+    # date = f'{date.year}-{date.month}-{date.day}'
+    # date = '2021-01-01'
+    # url = f'https://api.nasa.gov/planetary/apod?date={date}&hd=True&api_key=wgsgsqhuVb3nULkzTyVNPt0s1pLPwNGOWnTwljml'
+    # response = requests.get(url)
+    # potd = response.json()
+    # return render(request, 'baseApp/photoOfTheDay.html', {'potd': 'active', 'url': potd['url'], 'title': potd['title']})
+    return render(request, 'baseApp/photoOfTheDay.html', {'potd': 'active'})
 
 
 def about(request):
