@@ -10,8 +10,14 @@
     <div class="container">
         <div class="row">
             {% for img in image %}
-                <div class="col-lg-4 gallery">
-                    <img class="img-fluid img-thumbnail" src="{{ img.image.url }}">
+                <div class="col-xl-6 col-lg-12">
+                    <div class="card">
+                        <div class="sub-card">
+                            <a href="#" data-featherlight="#moment">
+                                <img id="moment" class="img-fluid img-thumbnail" src="{{ img.image.url }}">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             {% endfor %}
         </div>

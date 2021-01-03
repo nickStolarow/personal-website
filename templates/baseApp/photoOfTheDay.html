@@ -6,8 +6,10 @@
 {% endblock %}
 
 {% block content %}
-    <div class="statement">{{ title }}.</div>
-    <div class="container-fluid center">
-        <img class="img-fluid apod" src="{{ url }}" alt="Photo of the day from NASA">
-    </div>
+    <div class="statement apod-statement">{{ title }}.</div>
+        <div class="card center">
+            <div class="sub-card">
+                <img class="img-fluid rounded apod" src="{{ url }}" alt="Photo of the day from NASA">
+            </div>
+        </div>
 {% endblock %}

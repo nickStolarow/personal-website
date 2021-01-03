@@ -16,14 +16,14 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from baseApp import views as base_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', base_view.experience, name='experience'),
     path('connect/', base_view.connect, name='connect'),
-    path('gallery', base_view.gallery, name='gallery'),
+    path('gallery/', base_view.gallery, name='gallery'),
     path('photoOfTheDay/', base_view.photo_of_the_day, name='potd'),
     path('about/', base_view.about, name='about'),
 ]

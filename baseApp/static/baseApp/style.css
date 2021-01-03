@@ -18,6 +18,7 @@ body {
 }
 
 .nav-link {
+    font-family: 'Montserrat', sans-serif;;
     font-size: 20px;
     font-weight: 500;
 }
@@ -28,7 +29,7 @@ body {
 }
 
 .statement {
-    margin: 50px 0px;
+    margin: 50px 3px;
     text-align: center;
     font-size: 45px;
     color: saddlebrown;
@@ -37,7 +38,6 @@ body {
 .card {
     background-color: #eddcd2;
     margin: 5% 10%;
-    padding: 0px 0px;
     -moz-box-shadow: 0 0 20px #ccc;
     -webkit-box-shadow: 0 0 20px #ccc;
     box-shadow: 0 0 20px #ccc;
@@ -48,20 +48,9 @@ body {
     margin: 4% 4%;
     padding: 4% 4%;
     border-radius: 3px;
-    -moz-box-shadow: 0 0 20px #ccc;
-    -webkit-box-shadow: 0 0 20px #ccc;
-    box-shadow: 0 0 20px #ccc;
-}
-
-.small-card {
-    width: 374px;
-    height: 374px;
-    background-color: #f7f7f7;
-    margin: 3% 5%;
-    padding: 50px 50px;
-    -moz-box-shadow: 0 0 20px #b7b7a4;
-    -webkit-box-shadow: 0 0 20px #b7b7a4;
-    box-shadow: 0 0 20px #b7b7a4;
+    -moz-box-shadow: 0 0 10px gray;
+    -webkit-box-shadow: 0 0 10px gray;
+    box-shadow: 0 0 10px gray;
 }
 
 .center {
@@ -88,26 +77,16 @@ body {
     font-size: 25px;
 }
 
-.link-image {
-    margin-top: 0px;
-}
-
 .apod {
-    margin-bottom: 12px;
-}
-
-.gallery {
-    margin-top: 10px;
+    -moz-box-shadow: 0 0 15px gray;
+    -webkit-box-shadow: 0 0 15px gray;
+    box-shadow: 0 0 15px gray;
 }
 
 /* When columns stack, add margin to the top of duties */
 @media only screen and (max-width: 991px) {
     .duties {
         margin-top: 40px;
-    }
-
-    .link-image {
-        margin-top: 20px;
     }
 }
 
@@ -126,5 +105,9 @@ body {
 @media only screen and (max-width: 414px) {
     .duties {
         font-size: 20px;
+    }
+
+    .apod-statement {
+        font-size: 35px !important;
     }
 }
