@@ -21,7 +21,7 @@
     <title> {% block title %} Nick Stolarow - Experience {% endblock %}</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
+<nav class="navbar navbar-expand-lg navbar-light bg-custom">
     <div class="container-fluid">
         <a class="navbar-brand name" href="{% url 'experience' %}">Nick Stolarow</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -46,14 +46,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-<script>
-    function myFunction(e) {
-        var elems = document.querySelectorAll(".active");
-        [].forEach.call(elems, function (el) {
-            el.classList.remove("active");
-        });
-        e.target.className = "active";
-    }
-</script>
 </body>
 </html>

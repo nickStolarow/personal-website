@@ -1,6 +1,20 @@
+.colors {
+    background-color: #cb997e;
+    background-color: #eddcd2;
+    background-color: #fff1e6;
+    background-color: #f0efeb;
+    background-color: #ddbea9;
+    background-color: #a5a58d;
+    background-color: #b7b7a4;
+}
+
 body {
     font-family: 'Roboto Slab', serif;
-    background-color: #eeeeee;
+    background-color: #f0efeb;
+}
+
+.bg-custom {
+    background-color: #a5a58d;
 }
 
 .nav-link {
@@ -17,12 +31,23 @@ body {
     margin: 50px 0px;
     text-align: center;
     font-size: 45px;
+    color: saddlebrown;
 }
 
 .card {
-    background-color: #f7f7f7;
+    background-color: #eddcd2;
     margin: 5% 10%;
-    padding: 40px 0px;
+    padding: 0px 0px;
+    -moz-box-shadow: 0 0 20px #ccc;
+    -webkit-box-shadow: 0 0 20px #ccc;
+    box-shadow: 0 0 20px #ccc;
+}
+
+.sub-card {
+    background-color: #fff1e6;
+    margin: 4% 4%;
+    padding: 4% 4%;
+    border-radius: 3px;
     -moz-box-shadow: 0 0 20px #ccc;
     -webkit-box-shadow: 0 0 20px #ccc;
     box-shadow: 0 0 20px #ccc;
@@ -34,9 +59,9 @@ body {
     background-color: #f7f7f7;
     margin: 3% 5%;
     padding: 50px 50px;
-    -moz-box-shadow: 0 0 20px #ccc;
-    -webkit-box-shadow: 0 0 20px #ccc;
-    box-shadow: 0 0 20px #ccc;
+    -moz-box-shadow: 0 0 20px #b7b7a4;
+    -webkit-box-shadow: 0 0 20px #b7b7a4;
+    box-shadow: 0 0 20px #b7b7a4;
 }
 
 .center {
