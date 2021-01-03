@@ -7,5 +7,7 @@
 
 {% block content %}
     <div class="statement">{{ title }}</div>
-    <img class="apod" src="{{ url }}" alt="Photo of the day from NASA">
+    <div class="container-fluid center">
+        <img class="img-fluid apod" src="{{ url }}" alt="Photo of the day from NASA">
+    </div>
 {% endblock %}

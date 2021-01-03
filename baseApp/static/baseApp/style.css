@@ -68,9 +68,7 @@ body {
 }
 
 .apod {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 12px;
 }
 
 .img-thumbnail {
