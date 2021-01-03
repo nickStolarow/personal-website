@@ -10,8 +10,8 @@
     <div class="container">
         <div class="row">
             {% for img in image %}
-                <div class="col-lg-4">
-                    <img class="img-fluid img-thumbnail gallery" src="{{ img.image.url }}">
+                <div class="col-lg-4 gallery">
+                    <img class="img-fluid img-thumbnail" src="{{ img.image.url }}">
                 </div>
             {% endfor %}
         </div>
