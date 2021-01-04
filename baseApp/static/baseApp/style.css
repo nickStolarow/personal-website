@@ -13,6 +13,20 @@ body {
     background-color: #f0efeb;
 }
 
+a {
+    text-decoration: none;
+}
+
+.headshot {
+    shape-outside: circle();
+    width: 25rem;
+}
+
+.about-text {
+    margin-top: 10px;
+    font-size: 19px;
+}
+
 .bg-custom {
     background-color: #a5a58d;
 }
@@ -67,7 +81,7 @@ body {
 
 .backplate {
     background-color: black;
-    padding: 10px 10px;
+    padding: 100px 10px;
     border-radius: 3px;
 
 }
@@ -109,5 +123,16 @@ body {
 
     .apod-statement {
         font-size: 35px !important;
+    }
+}
+
+@media only screen and (min-width: 818px) {
+    .headshot {
+        float: left;
+        margin: 7px;
+    }
+
+    .about-text {
+        font-size: 25px;
     }
 }
