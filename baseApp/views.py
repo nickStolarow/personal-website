@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 import requests
 import datetime
 import pytz
@@ -19,12 +19,22 @@ def gallery(request):
 
 
 def photo_of_the_day(request):
-    tz = pytz.timezone('America/New_York')
-    date = datetime.datetime.now(tz).strftime('%Y-%m-%d')
+    tz = pytz.timezone('America/Detroit')
+
+    if request.GET:
+        date = request.GET['date']
+    else:
+        date = datetime.datetime.now(tz).strftime('%Y-%m-%d')
+
     url = f'https://api.nasa.gov/planetary/apod?date={date}&hd=True&api_key=wgsgsqhuVb3nULkzTyVNPt0s1pLPwNGOWnTwljml'
     response = requests.get(url)
     potd = response.json()
-    return render(request, 'baseApp/photoOfTheDay.html', {'potd': 'active', 'url': potd['url'], 'title': potd['title']})
+
+    if 'msg' in potd:
+        return redirect('potd')
+
+    return render(request, 'baseApp/photoOfTheDay.html',
+                  {'potd': 'active', 'url': potd['url'], 'title': potd['title'], 'date': date})
 
 
 def about(request):

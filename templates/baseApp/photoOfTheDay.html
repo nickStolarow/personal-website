@@ -9,6 +9,19 @@
     <a href="{{ url }}" target="_blank">
         <div class="statement apod-statement">{{ title }}.</div>
     </a>
+
+    <div class="container">
+        <form method="get">
+            <div class="form-group">
+                <label for="search-date">Date</label>
+                <input class="form-control" id="search-date" name="date" placeholder="YYYY-MM-DD"
+                       value="{{ date }}">
+                <small class="form-text text-muted">Search NASA's archive from Jun 16, 1995 to present</small>
+            </div>
+            <button type="submit" class="btn btn-outline-success">Search</button>
+        </form>
+    </div>
+
     <div class="card center">
         <div class="sub-card">
             <img class="img-fluid rounded apod" src="{{ url }}" alt="Photo of the day from NASA">
