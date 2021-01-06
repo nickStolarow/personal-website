@@ -20,6 +20,7 @@ def gallery(request):
 
 def photo_of_the_day(request):
     tz = pytz.timezone('America/Detroit')
+    video = False
 
     if request.GET:
         date = request.GET['date']
@@ -33,8 +34,11 @@ def photo_of_the_day(request):
     if 'msg' in potd:
         return redirect('potd')
 
+    if potd['media_type'] == 'video':
+        video = True
+
     return render(request, 'baseApp/photoOfTheDay.html',
-                  {'potd': 'active', 'url': potd['url'], 'title': potd['title'], 'date': date})
+                  {'potd': 'active', 'url': potd['url'], 'title': potd['title'], 'date': date, 'video': video})
 
 
 def about(request):

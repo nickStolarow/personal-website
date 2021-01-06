@@ -124,6 +124,10 @@ a {
     .apod-statement {
         font-size: 35px !important;
     }
+
+    .apod-submit {
+        visibility: hidden;
+    }
 }
 
 @media only screen and (min-width: 818px) {

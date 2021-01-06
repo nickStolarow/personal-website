@@ -6,9 +6,7 @@
 {% endblock %}
 
 {% block content %}
-    <a href="{{ url }}" target="_blank">
-        <div class="statement apod-statement">{{ title }}.</div>
-    </a>
+    <div class="statement apod-statement">{{ title }}.</div>
 
     <div class="container">
         <form method="get">
@@ -18,13 +16,19 @@
                        value="{{ date }}">
                 <small class="form-text text-muted">Search NASA's archive from Jun 16, 1995 to present</small>
             </div>
-            <button type="submit" class="btn btn-outline-success">Search</button>
+            <button type="submit" class="btn btn-outline-success apod-submit">Search</button>
         </form>
     </div>
 
     <div class="card center">
         <div class="sub-card">
-            <img class="img-fluid rounded apod" src="{{ url }}" alt="Photo of the day from NASA">
+            {% if video %}
+                <iframe class="img-fluid rounded apod" src="{{ url }}" alt="Photo of the day from NASA"></iframe>
+            {% else %}
+                <a href="{{ url }}" target="_blank">
+                    <img class="img-fluid rounded apod" src="{{ url }}" alt="Photo of the day from NASA">
+                </a>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
