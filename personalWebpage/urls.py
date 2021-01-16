@@ -26,6 +26,8 @@ urlpatterns = [
     path('gallery/', base_view.gallery, name='gallery'),
     path('photoOfTheDay/', base_view.photo_of_the_day, name='potd'),
     path('about/', base_view.about, name='about'),
+    path('productions/', base_view.productions, name='productions'),
+    path('productions/wordscapes/', base_view.wordscapes, name='wordscapes'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
