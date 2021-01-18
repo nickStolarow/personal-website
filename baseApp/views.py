@@ -116,7 +116,7 @@ def wordscapes(request):
     ends_words = ''
     contains_words = ''
     length_words = ''
-    length = 0
+    length = ''
 
     if request.GET:
         letters_og = request.GET['letters'].lower()
@@ -124,21 +124,21 @@ def wordscapes(request):
         starts_query = request.GET['starts'].lower()
         ends_query = request.GET['ends'].lower()
         contains_query = request.GET['contains'].lower()
-        length = request.GET['length'].lower()
-
-        try:
-            length = int(length)
-        except Exception:
-            length = 0
+        if request.GET['length'] != '':
+            length = int(request.GET['length'])
 
         words = solve(letters)
         if len(letters) != 0:
             starts_words = starts_with(words, starts_query)
             ends_words = ends_with(words, ends_query)
             contains_words = contains(words, contains_query)
-            length_words = length_of(words, length)
+            if length != '':
+                length_words = length_of(words, length)
 
-    result = set(starts_words).intersection(ends_words).intersection(contains_words).intersection(length_words)
+    if length != '':
+        result = set(starts_words).intersection(ends_words).intersection(contains_words).intersection(length_words)
+    else:
+        result = set(starts_words).intersection(ends_words).intersection(contains_words)
 
     return render(request, 'baseApp/wordscapes.html',
                   {'productions': 'active', 'letters': letters_og, 'starts': starts_query, 'ends': ends_query,

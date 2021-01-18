@@ -1,44 +1,53 @@
 {% extends 'baseApp/base.html' %}
 {% load static %}
 {% block content %}
-    <div class="container">
-        <form method="get">
-            <div class="mb-3 mt-3">
-                <label class="form-label">Letters:</label>
-                <input class="form-control" name="letters" value="{{ letters }}">
-                <small class="form-text">ex: a, b, c, d, e, f</small>
+    <div class="statement">Wordscapes Solver.</div>
+    <div class="card">
+        <div class="sub-card">
+            <div class="container">
+                <form method="get" autocomplete="off" autocapitalize="off">
+                    <div class="mb-3 mt-3">
+                        <label class="form-label">Letters:</label>
+                        <input class="form-control" name="letters" value="{{ letters }}">
+                        <small class="form-text">ex: a, b, c, d, e, f</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Starts with:</label>
+                        <input class="form-control" name="starts" value="{{ starts }}">
+                        <small class="form-text">ex: ch</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Ends with:</label>
+                        <input class="form-control" name="ends" value="{{ ends }}">
+                        <small class="form-text">ex: ing</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Contains:</label>
+                        <input class="form-control" name="contains" value="{{ contains }}">
+                        <small class="form-text">ex: ou</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Length:</label>
+                        <input class="form-control" type="number" name="length" value="{{ length }}">
+                        <small class="form-text">ex: 5</small>
+                    </div>
+                    <div><input class="btn btn-outline-success" type="submit"></div>
+                </form>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Starts with:</label>
-                <input class="form-control" name="starts" value="{{ starts }}">
-                <small class="form-text">ex: ch</small>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Ends with:</label>
-                <input class="form-control" name="ends" value="{{ ends }}">
-                <small class="form-text">ex: ing</small>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Contains:</label>
-                <input class="form-control" name="contains" value="{{ contains }}">
-                <small class="form-text">ex: ou</small>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Length:</label>
-                <input class="form-control" type="number" name="length" value="{{ length }}">
-                <small class="form-text">ex: 5</small>
-            </div>
-            <div><input class="btn btn-primary" type="submit"></div>
-        </form>
+        </div>
+    </div>
 
-        <div class="container center mb-3 mt-3">
-            <h3>Results:</h3>
-            {% for word in result %}
-                <h4>{{ word }}</h4>
-            {% endfor %}
-            {% if not result %}
-                <h4>No words found using the above queries.</h4>
-            {% endif %}
+    <div class="card">
+        <div class="sub-card">
+            <div class="container center">
+                <h3>Possible Words:</h3>
+                {% for word in result %}
+                    <h4>{{ word }}</h4>
+                {% endfor %}
+                {% if not result %}
+                    <h4>No words found using the above constraints.</h4>
+                {% endif %}
+            </div>
         </div>
     </div>
 {% endblock %}
